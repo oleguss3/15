@@ -10,10 +10,12 @@ public class MoneyCounter {
 
             if (money >= threshold) {
                 System.out.print("Буду отдыхать. ");
-                money -= expenses;
+                money -= expenses;                   // R = money - expenses
                 System.out.print("Потратил -" + expenses + ", ");
-                int lost = money / 3;
-                money -= lost;
+                int afterExpenses = money;           // R
+                int newMoney = afterExpenses / 3;    // остаток становится в 3 раза меньше
+                int lost = afterExpenses - newMoney; // печатаем, сколько «съел» отдых (≈ 2/3 R)
+                money = newMoney;
                 System.out.println("затем ещё -" + lost);
                 restMonths++;
             } else {
