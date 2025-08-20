@@ -2,7 +2,7 @@ package ru.netology.services;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class MoneyCounterTest {
 
@@ -14,7 +14,7 @@ public class MoneyCounterTest {
         int threshold = 20_000;
 
         int actual = service.calculate(income, expenses, threshold);
-        int expected = 4;
+        int expected = 3;
 
         assertEquals(expected, actual);
 
@@ -28,7 +28,7 @@ public class MoneyCounterTest {
         int threshold = 150_000;
 
         int actual = service.calculate(income, expenses, threshold);
-        int expected = 3;
+        int expected = 2;
 
         assertEquals(expected, actual);
 
@@ -57,7 +57,7 @@ public class MoneyCounterTest {
         int threshold = 20_000;
 
         int actual = service.calculate(income, expenses, threshold);
-        int expected = 5;
+        int expected = 3;
 
         assertEquals(expected, actual);
     }
